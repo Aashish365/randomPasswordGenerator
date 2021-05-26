@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="main_wrapper">
+			<h1>Random Password Generator :</h1>
+			<div class="wrapper">
+				<div class="options">
+					<div>Enter the length of the password you want :</div>
+					<div>Include numbers:</div>
+					<div>Include lowercase letters:</div>
+					<div>Include uppercase letters:</div>
+					<div>Include symbols:</div>
+					<div>Include special characters:</div>
+				</div>
+
+				<div class="user_choices">
+					<input
+						type="number"
+						id="len"
+						name="len"
+						placeholder="Enter the length between 0 -- 4096 "
+					/>
+					<div class="item">
+						<input
+							type="checkbox"
+							id="number"
+							name="number"
+							checked="checked"
+						/>
+						<span>(eg:0,1,2,3,4,5,6)</span>
+					</div>
+					<div class="item">
+						<input
+							type="checkbox"
+							id="L_char"
+							name="L_char"
+							checked="checked"
+						/>
+						<span>(eg:a,b,c,d,e,f,g,........)</span>
+					</div>
+
+					<div class="item">
+						<input
+							type="checkbox"
+							id="U_char"
+							name="U_char"
+							checked="checked"
+						/>
+						<span>(eg:B,C,D,E,F,G,.............)</span>
+					</div>
+
+					<div class="item">
+						<input
+							type="checkbox"
+							id="symbol"
+							name="symbol"
+							checked="checked"
+						/>
+						<span>(eg:@,#,$,%)</span>
+					</div>
+
+					<div class="item">
+						<input
+							type="checkbox"
+							id="s_char"
+							name="s_char"
+							checked="checked"
+						/>
+						<span>(eg: { } [ ] ( ) / \ ' " ` ~ , ; : . &lt &gt)</span>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="button" onclick="generatePassword()">
+				Generate Password
+			</button>
+
+			<div class="output">
+				<h3>Your password is:</h3>
+				<div id="password">Check your password here........</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
