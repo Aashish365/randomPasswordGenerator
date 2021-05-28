@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<title>Document</title>
 	</head>
@@ -25,6 +31,7 @@
 						type="number"
 						id="len"
 						name="len"
+						value="24"
 						placeholder="Enter the length between 0 -- 4096 "
 					/>
 					<div class="item">
@@ -82,8 +89,14 @@
 			</button>
 
 			<div class="output">
-				<h3>Your password is:</h3>
-				<div id="password">Check your password here........</div>
+				<span class="copy_icon"
+					><i class="far fa-clipboard" onclick="copyToClipboard()"></i
+				></span>
+				<input
+					id="password"
+					type="text"
+					value="Check your password here........"
+				/>
 			</div>
 		</div>
 		<script src="script.js"></script>

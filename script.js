@@ -93,7 +93,7 @@ function getData() {
 }
 
 function gotoInitial() {
-	document.getElementById("len").value = null;
+	document.getElementById("len").value = 24;
 	document.getElementById("number").checked = true;
 	document.getElementById("L_char").checked = true;
 	document.getElementById("U_char").checked = true;
@@ -140,10 +140,20 @@ function generatePassword() {
 		check_checked(uc, U_char);
 		check_checked(s, symbols);
 		check_checked(sc, s_char);
-		password.innerHTML = getpw();
+		password.value = getpw();
 	} else {
 		alert("please enter a password length between 6 to 4096");
 	}
 	gotoInitial();
 	makeEmpty();
+}
+
+function copyToClipboard() {
+	if (password.value == "Check your password here........") {
+		password.value = null;
+	} else {
+		password.select();
+		password.setSelectionRange(0, 99999);
+		document.execCommand("copy");
+	}
 }
